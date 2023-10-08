@@ -1,10 +1,9 @@
 import sqlite3
 import datetime
 
-conn = sqlite3.connect('db/database.db')
-cursor = conn.cursor()
-
 def validarUser(email):
+    conn = sqlite3.connect('db/database.db')
+    cursor = conn.cursor()
     cursor.execute(f"select * from users where email = '{email}'")
     user = cursor.fetchone()
     cursor.close()
@@ -12,6 +11,8 @@ def validarUser(email):
     return user
 
 def criarUser(name, email, password):
+    conn = sqlite3.connect('db/database.db')
+    cursor = conn.cursor()
     try:
         cursor.execute(f"select * from users where name='{name}'")
         possibleUser = cursor.fetchone()
@@ -30,7 +31,14 @@ def criarUser(name, email, password):
             name VARCHAR(100) NOT NULL,
             dtcreate TIMESTAMP
         );''')
+        conn.commit()
 
+        cursor.execute(f'''
+        create table casos_qnt_{name} (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            dado float NOT NULL,
+            dtcreate TIMESTAMP
+        );''')
         conn.commit()
         cursor.close()
         conn.close()

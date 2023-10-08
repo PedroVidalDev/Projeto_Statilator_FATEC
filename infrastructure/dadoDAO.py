@@ -13,6 +13,18 @@ def registrarDado(user, dado):
     except:
         return False
 
+def registrarDadoQnt(user, dado):
+    try:     
+        conn = sqlite3.connect('db/database.db')
+        cursor = conn.cursor()
+        cursor.execute(f"insert into casos_qnt_{user[1]} (dado, dtcreate) values (?,?)", (dado, datetime.datetime.now()))
+        conn.commit()
+        cursor.close()
+        conn.close()
+        return True
+    except:
+        return False
+
 def read(user):
     conn = sqlite3.connect('db/database.db')
     cursor = conn.cursor()
@@ -35,6 +47,15 @@ def readPareto(user):
     conn = sqlite3.connect('db/database.db')
     cursor = conn.cursor()
     cursor.execute(f"select name from casos_{user[1]}")
+    casos = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return casos
+
+def readQnt(user):
+    conn = sqlite3.connect('db/database.db')
+    cursor = conn.cursor()
+    cursor.execute(f"select dado from casos_qnt_{user[1]}")
     casos = cursor.fetchall()
     cursor.close()
     conn.close()

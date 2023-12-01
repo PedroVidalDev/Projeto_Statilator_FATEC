@@ -23,19 +23,22 @@ def userFront(user):
     buttonAddDado = customtkinter.CTkButton(master=app, text="Adicionar dado", command=lambda:function(1))
     buttonAddDado.place(relx=0.5, rely=0.25, anchor=customtkinter.CENTER)
  
-    buttonPareto = customtkinter.CTkButton(master=app, text="Realizar analise de pareto", command=lambda:function(4))
+    buttonPareto = customtkinter.CTkButton(master=app, text="Realizar analise de pareto", command=lambda:function(2))
     buttonPareto.place(relx=0.5, rely=0.30, anchor=customtkinter.CENTER)
 
-    buttonAddDadoQnt = customtkinter.CTkButton(master=app, text="Adiocionar dado qnt.", command=lambda:function(2))
+    buttonAddDadoQnt = customtkinter.CTkButton(master=app, text="Adiocionar dado qnt.", command=lambda:function(3))
     buttonAddDadoQnt.place(relx=0.5, rely=0.4, anchor=customtkinter.CENTER)
     
-    buttonPareto = customtkinter.CTkButton(master=app, text="Realizar analise quantitativa", command=lambda:function(5))
+    buttonPareto = customtkinter.CTkButton(master=app, text="Realizar analise quantitativa", command=lambda:function(4))
     buttonPareto.place(relx=0.5, rely=0.45, anchor=customtkinter.CENTER)
 
+    buttonBinomial = customtkinter.CTkButton(master=app, text="Realizar binomial", command=lambda:function(5))
+    buttonBinomial.place(relx=0.5, rely=0.55, anchor=customtkinter.CENTER)
+
     buttonLimparBanco = customtkinter.CTkButton(master=app, text="Resetar registros", command=lambda:function(6))
-    buttonLimparBanco.place(relx=0.5, rely=0.55, anchor=customtkinter.CENTER)
+    buttonLimparBanco.place(relx=0.5, rely=0.65, anchor=customtkinter.CENTER)
 
     buttonSair = customtkinter.CTkButton(master=app, text="Sair", command=lambda:function(7))
-    buttonSair.place(relx=0.5, rely=0.65, anchor=customtkinter.CENTER)
+    buttonSair.place(relx=0.5, rely=0.75, anchor=customtkinter.CENTER)
 
     app.mainloop()

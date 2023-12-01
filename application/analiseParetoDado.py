@@ -1,6 +1,5 @@
 import domain.DadoService as DadoService
 
-from prettytable import PrettyTable
 import customtkinter
 from tkinter import ttk
 from tkinter import *

@@ -5,6 +5,7 @@ import application.registrarDadoQnt as registrarDadoQnt
 import application.deletarDado as deletarDado
 import application.analiseParetoDado as analisePareto
 import application.analiseDadoQnt as analiseDadoQnt
+import application.analiseBinomial as analiseBinomial
 
 def verificarMenu(esc):
     if(esc == 1):
@@ -17,12 +18,14 @@ def verificarMenu(esc):
 def verificarUserMenu(esc, user):
     if(esc == 1):
         registrarDadoFront.registrarDadoFront(user)
-    elif(esc == 2):
+    elif(esc == 3):
         registrarDadoQnt.registrarDadoFront(user)       
-    elif(esc == 4):
+    elif(esc == 2):
         analisePareto.analiseParetoFront(user)
-    elif(esc == 5):
+    elif(esc == 4):
         analiseDadoQnt.analiseQntFront(user)
+    elif(esc == 5):
+        analiseBinomial.binomialFront(user)
     elif(esc == 6):
         deletarDado.deletarDadoFront(user)
     else:

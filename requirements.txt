@@ -1,0 +1,7 @@
+customtkinter
+tkinter
+numpy
+scipy
+matplotlib
+sqlite3
+datetime

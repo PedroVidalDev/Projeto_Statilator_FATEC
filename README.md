@@ -1,7 +1,7 @@
 # <p align="center"> Statilator </p>
 
 ## Resumo
-Projeto feito com o intuito de ser uma calculadora estatística, realizando análise de pareto e diversos outros cálculos.
+Projeto simples desenvolvido com o intuito de ser uma calculadora estatística, realizando análise de pareto e diversos outros cálculos.
 
 ## Tecnologias Utilizadas
 - Python

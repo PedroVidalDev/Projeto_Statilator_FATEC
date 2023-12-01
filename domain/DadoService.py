@@ -68,14 +68,7 @@ def analiseQnt(user):
     mediana = np.quantile(listaDados, .5)
     terceiroQuartil = np.quantile(listaDados, .75)
 
-    print("maior numero: " , maiorNum)
-    print("menor numero" , menorNum)
-    print("amplitude " , amplitude)
-    print("media " , media)
-    print("mediana " , mediana)
-    print("moda " , moda)
-    print("1 quartil " , primeiroQuartil)
-    print("3 quartil " , terceiroQuartil)
+    return [maiorNum, menorNum, amplitude, media, mediana, moda, primeiroQuartil, terceiroQuartil]
 
 def deletar(user):
     return dadoDAO.deletar(user)

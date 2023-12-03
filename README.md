@@ -14,4 +14,4 @@ Projeto feito com o intuito de ser uma calculadora estatística, realizando aná
 ## Dependências
 Antes de rodar o projeto em sua máquina será necessário realizar duas ações:
 - Rodar o arquivo ```/db/createTableUsers.py```
-- Baixar as bibliotecas utilizadas no projeto, por meio do comando ```py -m pip install -r requirements.txt```
+- Baixar as bibliotecas utilizadas no projeto que foram mencionadas no tópico anterior.

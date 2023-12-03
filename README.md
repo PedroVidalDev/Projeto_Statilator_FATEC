@@ -1,7 +1,7 @@
 # <p align="center"> Statilator </p>
 
 ## Resumo
-Projeto simples desenvolvido com o intuito de ser uma calculadora estatística, realizando análise de pareto e diversos outros cálculos.
+Projeto simples desenvolvido com o intuito de ser uma calculadora estatística para entrega final da matéria de Estatística Aplicada da Fatec Ferraz, realizando análise de pareto e diversos outros cálculos.
 
 ## Tecnologias Utilizadas
 - Python
